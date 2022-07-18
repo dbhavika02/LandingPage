@@ -9,6 +9,7 @@ body{
     background-color: #D8DBE2;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 ul{
@@ -60,13 +61,22 @@ ul{
 }
 
 .text h1{
-    font-size: 120px;
+    font-size: 110px;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: -10px;
+    margin-bottom: 20px;
+
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 600px;
+}
+.text h1 .hidetext{
+    position: absolute;
 }
 
-.text h1::after{
+/* .text h1::after{
     content: "duality";
     position: absolute;
     top: 40px;
@@ -76,6 +86,19 @@ ul{
     font-size: 150px;
     font-weight: 600;
     letter-spacing: 8px;
+} */
+
+.text h2{
+    content: "duality";
+    position: absolute;
+    top: 40px;
+    left: -80px;
+    color: #588c7e;
+    z-index: -1;
+    font-size: 150px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-transform: uppercase;
 }
 
 .text h3{
@@ -83,14 +106,30 @@ ul{
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1;
+
+    position: relative;
+    overflow: hidden;
+    height: 80px;
 }
 
-.text p{
-    width: 200px;
+.text h3 .hidetext{
+    position: absolute;
+}
+
+/* .text p{
+    width: 280px;
     font-size: 12px;
     margin-top: 30px;
     font-weight: 500;
+
+    position: relative;
+    overflow: hidden;
+    height: 110px;
 }
+
+.text p .hidetext{
+    position: absolute;
+} */
 
 .sponsor{
     position: absolute;
@@ -110,4 +149,34 @@ ul{
     text-transform: uppercase;
     font-weight: 900;
     transform: rotate(180deg);
+}
+
+.distortion{
+    width: 740px;
+    height: 720px;
+    position: absolute;
+    right: 300px;
+    bottom: 0;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    z-index: 99;
+}
+
+.first{
+    background: #588c7e;
+}
+
+.second{
+    background: #588c7e;
+    left: 33.3%;
+}
+
+.third{
+    background: #588c7e;
+    left: 66.6%;
 }
